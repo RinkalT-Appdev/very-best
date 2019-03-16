@@ -99,15 +99,15 @@
       
       </tr>
 
-      <% Bookmark.where(user_id: current_user.id).each do |venue| %>
+      <% @venues.each do |venue| %>
       <tr>
         <td>
-        <a href="/venue/<%= @venue_id %>">
+        <a href="/venue/<%= venue.id %>">
         </td>
         
         <td>
       
-             <%= Venue.find(venue.venue_id).name %>
+             <%= venue.name %>
             </a>
           
         </td>
